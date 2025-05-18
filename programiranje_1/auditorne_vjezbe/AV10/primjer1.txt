@@ -1,0 +1,5 @@
+Ovo je prva recenica.
+Ovo je druga recenica.
+Prva linija.
+Druga linija.
+10

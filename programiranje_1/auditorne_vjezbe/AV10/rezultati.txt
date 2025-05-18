@@ -1,0 +1,4 @@
+LV-Test-1 8.5
+I-parcijala 15
+LV-Test-2 7
+Zavrsni ispit 35

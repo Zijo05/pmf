@@ -1,0 +1,3 @@
+Napisati program koji u fajl abeceda.txt upisuje sve slova
+engleskog alfabeta, pri cemu se svako slovo ispisuje u zasebnu liniju i
+ispred slova se upisuje redni broj tog slova.
