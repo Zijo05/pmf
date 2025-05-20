@@ -1,18 +1,19 @@
 #include <iostream>
-#include <vector>
-#include <algorithm>
+#include <cmath>
 
-template <typename Ispisiviobjekat>
-void IspisiNiz(std::vector<Ispisiviobjekat> v, int broj_elemenata)
+bool je_prost(unsigned int n)
 {
-    for (int i = 0; i < broj_elemenata; i++)
-        std ::cout << v[i] << " ";
+    if (n == 1)
+        return false;
+    for (unsigned int i(2); i <= sqrt(n); i++)
+        if (n % i == 0)
+            return false;
+    return true;
 }
 
 int main()
 {
-    std::vector<double> v{1.2, 2, 3, 4, 5, 6, 7};
-    std::sort(v.begin(), v.end(), std::greater<double>());
-    IspisiNiz(v, 7);
+    std::cout << je_prost(2);
+
     return 0;
 }
