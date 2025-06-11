@@ -1,38 +1,35 @@
 #include <iostream>
-#include <vector>
-#include <string>
+using namespace std;
 
-template <typename T>
+class MyClass {
+private:
 
-std::vector<T> f(T *niz1, int duzina1, T *niz2, int duzina2)
-{
-    std::vector<T> rezultat = {};
+    // Pointer to dynamically 
+    // allocated memory
+    int* data;
 
-    for (int i = 0; i < duzina2; i++)
-    {
-        for (int j = 0; j < *(niz2 + i); j++)
-        {
-            int broj(niz1[i]);
-            std::cout << broj << " ";
-            rezultat.push_back(broj);
-        }
-    }
-    std::cout << std::endl;
-    for (int r = 0; r < rezultat.size(); r++)
-    {
-        std::cout << rezultat[r] << " ";
+public:
+    MyClass(int value) {
+        data = new int;
+        *data = value;
+        cout << *data << endl;
     }
 
-    return rezultat;
-}
+    // User-defined destructor: Free 
+    // the dynamically allocated memory
+    ~MyClass() {
+        
+        // Deallocate the dynamically 
+        // allocated memory
+        delete data;  
+        cout << "Destructor: Memory deallocated";
+    }
+};
 
-int main()
-{
-    int niz1[] = {2, 4, 9, 10};
-    int niz2[] = {1, 3, 3, 4};
+int main() {
+    MyClass obj1(10);
 
-    int duzina1 = sizeof(niz1) / sizeof(niz1[0]);
-    int duzina2 = sizeof(niz2) / sizeof(niz2[0]);
 
-    f(niz1, duzina1, niz2, duzina2);
+    std::cout << "\n test \n";
+    return 0;
 }
