@@ -12,11 +12,6 @@ int nCifra(int number, int n) // returns n-th digit of a number
     return number % 10;
 }
 
-int findDigitHex(int number, int n) // returns n-th hex digit of a number
-{
-    return (number >> (4 * n) & 0x0F);
-}
-
 void radixSort(std::vector<int> &v, int maxDigits)
 {
     int digitPosition = 1;
@@ -35,6 +30,11 @@ void radixSort(std::vector<int> &v, int maxDigits)
                 v.push_back(number);
         digitPosition++;
     }
+}
+
+int findDigitHex(int number, int n) // returns n-th hex digit of a number
+{
+    return (number >> (4 * n) & 0x0F);
 }
 
 void radixSortHex(std::vector<int> &v, int maxDigits)

@@ -1,0 +1,30 @@
+// Dva zadatka
+    1. Neki sort
+    2. Implementacija liste (ili nekih dijelova liste)
+
+
+-Bubble sort
+Ide od prvog do zadnjeg nesortiranog (jer se nakon svakog prolaza najveći element nađe na kraju) 
+i mijenja ako je trenutni veći od idućeg, ovo ponavlja n puta
+
+-Selection sort
+Podijelimo niz u sortirani (lijevi) i nesortirani (desni) dio. Nadjemo najmanji u 
+nesortiranom i zamijenimo ga sa prvim u nesortiranom, prolazimo n puta
+
+-Insertion sort
+Krecemo od drugog elementa u nizu i poredimo ga sa prethodnim, ako je trenutni manji od prethodnog 
+zamijenimo ih i nastavimo ih mijenjati dok ne dodjemo do pocetka ili do manjeg elementa od trenutnog
+
+-Merge sort
+Podijelimo vektor na dva podvektora (lijevi i desni), pozovemo rekurzivno merge_sort za lijevi 
+i desni dio. Zatim kombiniramo rjesenje ova dva dijela tako što u vektor ubacujemo iz lijevog i 
+desnog sortiranog dijela istovremeno manji od onih na trenutnim indeksnim brojacima za oba koristeci 
+konstantno rastuci indeksni brojac za glavi vektor u koji ubacujemo. zatim kada smo dosli do kraja 
+od jednog od sortiranih vektora u glavni vektor ubacijemo preostale iz lijeve ili desne strane.
+
+-Quick sort
+Odaberemo pivota, podijelimo vektor na dva dijela, manji od pivota (lijev) i veci od pivota (desni). 
+Ako je lijeva granica manja od desne, pozovemo qucik_sort rekurzivno za lijevi dio i desni dio 
+isključujući pivot.
+
+-Shell sort
