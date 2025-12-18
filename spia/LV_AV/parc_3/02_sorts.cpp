@@ -41,9 +41,9 @@ void merge_sort(std::vector<T> &v, int start, int end)
         throw std::invalid_argument("Vector is empty!");
     else if (start >= end)
         return;
-    else if (v.size() == 2 && v[0] > v[1])
+    else if (end - start == 1)
     {
-        std::swap(v[0], v[1]);
+        std::swap(v[start], v[end]);
         return;
     }
 
